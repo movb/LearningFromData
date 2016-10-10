@@ -47,4 +47,6 @@ object VectorImplicits {
     (new Vector(value.transpose.data(0)))
 }
 
-case class Vector(val data:Array[Double])
+case class Vector(val data:Array[Double]) {
+  override def toString():String = "[" + (data mkString " ") + "]"
+}

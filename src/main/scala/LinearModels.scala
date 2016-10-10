@@ -34,7 +34,7 @@ class Line(val w1: Double, val w2: Double, val w3: Double) {
   override def toString(): String = w1 + "*x + " + w2 + "*y + " + w3
 }
 
-class LinearRegression(val X:Matrix,val y:Vector) {
+case class LinearRegression(val X:Matrix,val y:Vector) {
   def Fit(): Vector = {
     (X.transpose * X).inverse * X.transpose * y
   }
